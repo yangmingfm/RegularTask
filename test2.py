@@ -15,9 +15,7 @@ haha(a='a', b='b')
 
 def testFunc(arg1,*kw,**nkw):
     print arg1
-    for each in kw:
-        print each
-    for each in nkw:
-        print each
+    print kw
+    print nkw
 
 testFunc(1,*(1,2),**{'1':2,'3':4})
