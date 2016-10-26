@@ -15,6 +15,7 @@ class ThreadFunc(object):
         print kwargs
 
     def __call__(self):
+        ''
         self.func(self.args,self.kwargs)
 
 class Task(ThreadFunc):

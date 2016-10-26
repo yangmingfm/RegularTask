@@ -19,5 +19,5 @@ class TaskThread(threading.Thread):
         taskThread = threading.Thread(target = ThreadFunc.Task)
         taskThread.setDaemon(False)
         taskThread.start()
-        sleep(self.liveTime)
-        if taskThread.isAlive():
+        taskThread.join(self.liveTime)
+        
