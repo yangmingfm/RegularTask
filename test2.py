@@ -13,10 +13,11 @@ def haha(**kw):
 
 haha(a='a', b='b')
 
-def mSay(a,b):
-    print a,b
+def testFunc(arg1,*kw,**nkw):
+    print arg1
+    for each in kw:
+        print each
+    for each in nkw:
+        print each
 
-def test():
-    apply(mSay,(),a=1,b=2)
-
-test()
+testFunc(1,*(1,2),**{'1':2,'3':4})
